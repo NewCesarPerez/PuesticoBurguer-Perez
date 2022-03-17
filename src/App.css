@@ -19,7 +19,16 @@
 .list{
   color: #61dafb;
 }
-
+.fontColorSumar {
+  color: blue;
+}
+.fontColorRestar {
+  color: red;
+}
+.Border {
+  border-style: groove;
+  width: 2rem;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

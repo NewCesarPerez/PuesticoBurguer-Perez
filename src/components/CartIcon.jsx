@@ -1,12 +1,12 @@
 import React from 'react'
 
 
-const CartIcon = () => {
+const CartIcon = ({OrderSum}) => {
 return (
     <>
     <div className='d-flex flex-row'>
     <a className='my-1' href="./index.html"><i className=' bi bi-cart'></i></a>
-    <p className='mx-1 my-1'>0</p>
+    <div id='CartCounter' className='mx-1 my-1'>{OrderSum}</div>
     </div>
     </>
     )
