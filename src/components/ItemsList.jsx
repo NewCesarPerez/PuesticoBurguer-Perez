@@ -1,6 +1,6 @@
 import React from 'react'
-const products=["Hamburguesa","Arepa", "Patacon"]
-const ItemsList = () => {
+
+const ItemsList = ({products}) => {
   return (
       <ul className='list d-flex flex-row mx-1 justify-content-center align-item-center'>
         
