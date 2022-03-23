@@ -2,19 +2,20 @@ import React, { useState } from 'react';
 import CartIcon from './CartIcon';
 
 
-let orderSum = 0;
+// let orderSum = 0;
 const StockProducto = 10;
 let currentStock = StockProducto;
 
-export default function Button({ MaxStock }) {
-const [count, setCount] = useState(0);
-const [OrderSum, setOrderSum]=useState(0);
+export default function ItemCount({initial, stock, onAddDos}) {
+const [count, setCount] = useState(initial);
+// const [OrderSum, setOrderSum]=useState(0);
 const [initialColor, setColor] = useState();
+
 
 
   //Funciones de contador: Inicio
 let sumar = () => {
-    if (count === MaxStock) {
+    if (count === stock) {
     console.log('Limite de stock');
     return;
     } else {
@@ -32,29 +33,29 @@ let restar = () => {
   //Funciones de contador: function
 
   //Agregar Carrito: Inicio
-let OnAdd = () => {
-    if (
-    (orderSum <= currentStock && orderSum > 0 &&count!==0) ||
-    (count <= currentStock && count > 0)
-    ) {
-        setOrderSum(OrderSum+count)
-    //orderSum = orderSum + count;
-    console.log('Stock actualizado, Agregado al carrito');
-    alert('Stock actualizado, Agregado al carrito');
-    console.log('Count: ' + count);
-    console.log('Order Sum: ' + orderSum);
-    currentStock = currentStock - count;
+// let OnAdd = () => {
+//     if (
+//     (orderSum <= currentStock && orderSum > 0 &&count!==0) ||
+//     (count <= currentStock && count > 0)
+//     ) {
+//     setOrderSum(OrderSum+count)
+//     //orderSum = orderSum + count;
+//     console.log('Stock actualizado, Agregado al carrito');
+//     alert('Stock actualizado, Agregado al carrito');
+//     console.log('Count: ' + count);
+//     console.log('Order Sum: ' + OrderSum);
+//     currentStock = currentStock - count;
     
     
-    } else if (count === 0) 
-        {console.log('Contador en 0');
-        alert('Contador en 0')}
-    else {
-        console.log('No es posible procesar la orden. Stock superado.');
-        alert('No es posible procesar la orden. Stock superado.');
+//     } else if (count === 0) 
+//         {console.log('Contador en 0');
+//         alert('Contador en 0')}
+//     else {
+//         console.log('No es posible procesar la orden. Stock superado.');
+//         alert('No es posible procesar la orden. Stock superado.');
         
-    }
-};
+//     }
+// };
 
   //Agregar Carrito: Fin
 
@@ -76,7 +77,7 @@ return (
     </button>
 
     <div className="Border">{count}</div>
-    <button onClick={() => OnAdd()}>Agregar al Carrito</button>
+    <button onClick={()=>onAddDos(count, stock)}>Agregar al Carrito</button>
     <button
         onClick={() => {
         console.log('Stock: ' + currentStock);
@@ -85,7 +86,7 @@ return (
     >
         Consultar Stock
     </button>
-    <CartIcon OrderSum={OrderSum}/>
+    <CartIcon/>
     </div>
 );
 }
