@@ -70,19 +70,22 @@ const postres=[
         "imagen": CheeseCake
     }]
 
-    
+    let promiseDesserts;  
 const ItemListContainer = () => {
 
 const [desserts, setDesserts]=useState([]);
-const promiseDesserts= new Promise((resolve, reject) => {
+useEffect(()=>{promiseDesserts= new Promise((resolve, reject) => {
     setTimeout(() => {
     resolve(postres);
     }, 3000);
-})
+})},[]) 
 
-promiseDesserts.then((response)=>{
+useEffect(()=>{promiseDesserts.then((response)=>{
     setDesserts(response);
-})
+})},[]) 
+
+
+
 
 return (
     
