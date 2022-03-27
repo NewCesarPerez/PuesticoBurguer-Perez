@@ -1,40 +1,31 @@
 import React from 'react'
+import {Navbar, Container, Nav, NavDropdown} from 'react-bootstrap'
 
 import '../App.css';
-
-
-
-
-
-
 const NavBar = () => {
   return(
-      <>
-      
-        <nav className='navbar navbar-expand-lg navbar-light bg-light border-bottom d-flex w-100'>
-            <div className='container-fluid'>
-            <div className='navbar-brand fw-bold animate__animated animate__rubberBand' ><span className='titulo__index'>El Puestico Burger</span> </div>
-                <button className='navbar-toggler' type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span className='navbar-toggler-icon'></span> </button>
-                <div className='collapse navbar-collapse' id="navbarNavDropdown">
-                  <div className='d-flex flex-row mx-3'>
-                    
-                </div>
-                
-                        <ul className='navbar-nav w-100 justify-content-end'>
-                        <li className='nav-item'>
-                            <a className='nav-link' href="index.html">Login</a>
-                        </li>
-                        <li className='nav-item'>
-                            <a className='nav-link' href="./pages/work.html">Trabaja con nosotros</a>
-                        </li>
-                        <li className='nav-item'>
-                            <a className='nav-link' href="./pages/zulianidad.html">Zulianidad</a>
-                        </li>
-                    </ul>
-                    </div>
-                  </div>
-            </nav>
+      <>      
+<Navbar bg="warning" expand="lg">
+  <Container>
+    <Navbar.Brand href="#home">Puestico Burger</Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="me-auto">
+        <Nav.Link href="#home">Home</Nav.Link>
+        <Nav.Link href="#link">Platos</Nav.Link>
+        <Nav.Link href="#link">Bebidas</Nav.Link>
+        <Nav.Link href="#link">Postres</Nav.Link>
+        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+          <NavDropdown.Item href="#action/3.1">Login</NavDropdown.Item>
+          <NavDropdown.Item href="#action/3.2">Sobre nosotros</NavDropdown.Item>
+          <NavDropdown.Item href="#action/3.3">Agradecimientos</NavDropdown.Item>
+          <NavDropdown.Divider />
+          <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+        </NavDropdown>
+      </Nav>
+    </Navbar.Collapse>
+  </Container>
+</Navbar>
             </>)
   
 }

@@ -1,9 +1,14 @@
 // import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import NavBar from './components/NavBar';
 import ItemsList from './components/ItemsList';
 import ItemCount from './components/ItemCount';
 import ItemListContainer from './components/ItemListContainer';
+import ItemDescriptionContainer from './components/ItemDescriptionContainer';
+import Carrusel from './components/Carrusel';
+
 
 const stock=10;
 const initial=0;
@@ -31,34 +36,34 @@ if (count >0 && stock >0){
 
 function App() 
 {
-  const promise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-    resolve(mensaje);
-    }, 0);
-});
-const promiseDos = new Promise((resolve, reject) => {
-  setTimeout(() => {
-  resolve();
-  }, 2000);
-});
-
-promise.then((response) => {
-  document.getElementById("ItemList").innerHTML =response;
-})
-promiseDos.then(() => {
-  document.getElementById("ItemList").innerHTML ="";
-});
+  
 
   return (
     <div className="App">
-      <NavBar/>
-      <main className='w-100 my-5 '>
-        <ItemsList products={{...products}}/>
+      <div className='w-100'>
+        <NavBar/>
+      </div>
+      <main className='w-100 '>
+
+       
+        <Carrusel />
+        
         <div id='ItemList'>
         
         
         </div>
-        <ItemListContainer/>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-9'>
+              <ItemListContainer/>
+            </div>
+            <div className='col-3 bg-danger my-4'>
+            <ItemDescriptionContainer/>
+            </div>
+          </div>
+          
+        </div>
+
           <div className='border w-50 m-auto'>
             <h1>Ordena tu pedido</h1>
             <h5 className='my-5'>Hamburguesa Maracucha</h5>

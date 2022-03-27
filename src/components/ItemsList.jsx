@@ -1,14 +1,11 @@
 import React from 'react'
+import Item from './Item'
 
 const ItemsList = ({products}) => {
   return (
-      <ul className='list d-flex flex-row mx-1 justify-content-center align-item-center'>
-        
-          <li className='mx-5'>{products[0]}</li>
-          <li className='mx-5'>{products[1]}</li>
-          <li className='mx-5'>{products[2]}</li>
-          
-      </ul>
+      <div className='row'>
+        {products.map(elements=><Item price={elements.price} id={elements.id} title={elements.title} imagen={elements.imagen} key={elements.id} />)}
+      </div>
     
   )
 }
