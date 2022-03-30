@@ -10,7 +10,7 @@ const Carrusel = () => {
 <Carousel>
   <Carousel.Item>
     <img
-      className="d-flex h-25 w-100 m-auto"
+      className="d-flex w-100 m-auto"
       src={imgCarouselOne}
       alt="First slide"
     />

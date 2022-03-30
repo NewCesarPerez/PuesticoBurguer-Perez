@@ -5,6 +5,7 @@ import PepsiComun from "../imagenes/pepsi.png"
 import SevenUp from "../imagenes/7up.png"
 import Patagonia from "../imagenes/patagonia.png"
 import LemonPie from "../imagenes/lemonPie.jpg"
+import ChocoTorta from"../imagenes/chocoTorta.jpg"
 import CheeseCake from "../imagenes/cheeseCake.jpg"
 import HambPolloDetail from "../imagenes/hambPolloForDetail.jpg"
 import ArepaDetail from "../imagenes/ArepaDetail.jpg"
@@ -79,7 +80,7 @@ const Items=[
             "price": 550,
             "id": 11,
             "title": "Choco Torta",
-            "imagen": "https://cdn.shopify.com/s/files/1/0366/4442/1770/products/chocotortaentera_590x.jpg?v=1619473217",
+            "imagen": ChocoTorta,
             "imagenDetail": "https://cdn.shopify.com/s/files/1/0366/4442/1770/products/chocotortaentera_590x.jpg?v=1619473217",
             "descripcion":"Tradición Argentina.",
             "category": "Postres"
