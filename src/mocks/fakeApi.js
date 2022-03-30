@@ -9,7 +9,7 @@ import ChocoTorta from"../imagenes/chocoTorta.jpg"
 import CheeseCake from "../imagenes/cheeseCake.jpg"
 import HambPolloDetail from "../imagenes/hambPolloForDetail.jpg"
 import ArepaDetail from "../imagenes/ArepaDetail.jpg"
-import tequeniosDetail from "../imagenes/ArepaDetail.jpg"
+import tequeniosDetail from "../imagenes/20211027_233845.jpg"
 
 const Items=[
     
