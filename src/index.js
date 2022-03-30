@@ -11,8 +11,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 ReactDOM.render(
   <React.StrictMode>
 
-    
-    <App />
+  <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

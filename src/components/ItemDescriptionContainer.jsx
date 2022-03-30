@@ -19,7 +19,7 @@ console.log(productDetail)
 return (
     <div id='ItemDescriptionContainer' className='row'>
         {loading?<div className='spinner-border text-warning m-3' role="status">
-</div>:<ItemDescription productDetail={productDetail}/>}
+                </div>:<ItemDescription productDetail={productDetail}/>}
     </div>
 )
 }

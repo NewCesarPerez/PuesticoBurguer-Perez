@@ -4,7 +4,7 @@ import {Navbar, Container, Nav, NavDropdown} from 'react-bootstrap'
 import '../App.css';
 const NavBar = () => {
   return(
-      <>      
+    <div className='w-100'>     
 <Navbar bg="warning" expand="lg">
   <Container>
     <Navbar.Brand href="#home">Puestico Burger</Navbar.Brand>
@@ -26,7 +26,7 @@ const NavBar = () => {
     </Navbar.Collapse>
   </Container>
 </Navbar>
-            </>)
+            </div>)
   
 }
 

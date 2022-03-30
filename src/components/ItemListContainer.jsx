@@ -38,7 +38,7 @@ return (
         <div  className='container'>
             <div id='ItemContainer'>
             {Loading?<div className='spinner-border text-danger m-3' role="status">
-</div>:<ItemsList products={products}/>}
+                    </div>:<ItemsList products={products}/>}
                 
                 
             </div>

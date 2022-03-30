@@ -8,12 +8,13 @@ import ItemCount from './components/ItemCount';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDescriptionContainer from './components/ItemDescriptionContainer';
 import Carrusel from './components/Carrusel';
+import { BrowserRouter, Router, Routes, Route } from 'react-router-dom';
+import React from 'react';
 
 
 const stock=10;
 const initial=0;
-const products=["Hamburguesa","Arepa", "Patacon"]
-const mensaje="Cargando red bancaria"
+
 
 let onAddDos=  (count, stock, OrderSum)=>{
 if (count >0 && stock >0){
@@ -39,19 +40,13 @@ function App()
   
 
   return (
+    <BrowserRouter>
+    
     <div className="App">
-      <div className='w-100'>
+      
         <NavBar/>
-      </div>
       <main className='w-100 '>
-
-       
         <Carrusel />
-        
-        <div id='ItemList'>
-        
-        
-        </div>
         <div className='container'>
           <div className='row'>
             <div className='col-9'>
@@ -61,9 +56,7 @@ function App()
             <ItemDescriptionContainer/>
             </div>
           </div>
-          
         </div>
-
           <div className='border w-50 m-auto'>
             <h1>Ordena tu pedido</h1>
             <h5 className='my-5'>Hamburguesa Maracucha</h5>
@@ -73,6 +66,11 @@ function App()
           </div>
       </main>
     </div>
+  
+    <Routes>
+      <Route path="/" element={<ItemListContainer/>}> </Route>
+    </Routes> 
+    </BrowserRouter>
   );
 }
 
