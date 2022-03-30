@@ -81,7 +81,7 @@ const Items=[
             "id": 11,
             "title": "Choco Torta",
             "imagen": ChocoTorta,
-            "imagenDetail": "https://cdn.shopify.com/s/files/1/0366/4442/1770/products/chocotortaentera_590x.jpg?v=1619473217",
+            "imagenDetail": ChocoTorta,
             "descripcion":"Tradición Argentina.",
             "category": "Postres"
         },{

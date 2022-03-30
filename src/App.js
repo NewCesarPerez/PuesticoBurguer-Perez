@@ -23,7 +23,9 @@ function App()
     <div className="App">
         <NavBar/>
       <main className='w-100 '>
+        
         <Carrusel />
+        
       <Routes>
         <Route path="/" element={<ItemListContainer/>}/>
         <Route path="/category/:categoryId" element={<ItemListContainer />} />
