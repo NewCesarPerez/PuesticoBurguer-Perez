@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemDescriptionButton from './ItemDescriptionButton'
+import { Link } from 'react-router-dom';
 
 const Item = ({price, id, title, imagen, }) => {
 return (
@@ -10,8 +10,8 @@ return (
                     <div key={id} className='card-body '>
                         <h5 className='card-title'>{title}</h5>
                         <p className='card-text'>{price}.</p>
-                        <ItemDescriptionButton/>
-                        <a href="https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md" className='btn btn-danger mx-1'>Comprar</a>
+                        <Link className='btn btn-warning mx-1' to={`/details/${id}`}>Detalles</Link>
+                        <Link className='btn btn-danger mx-1' to="/">Comprar</Link>
                     </div>
                 </div>
             

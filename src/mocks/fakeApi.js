@@ -7,6 +7,8 @@ import Patagonia from "../imagenes/patagonia.png"
 import LemonPie from "../imagenes/lemonPie.jpg"
 import CheeseCake from "../imagenes/cheeseCake.jpg"
 import HambPolloDetail from "../imagenes/hambPolloForDetail.jpg"
+import ArepaDetail from "../imagenes/ArepaDetail.jpg"
+import tequeniosDetail from "../imagenes/ArepaDetail.jpg"
 
 const Items=[
     
@@ -16,54 +18,79 @@ const Items=[
     "title": "Hamburguesa",
     "imagen": hamburguesaDePollo,
     "imagenDetail": HambPolloDetail,
-    "descripcion":"Pan suave, pollo a la plancha, queso de mano y amarillo, panceta, lomo y salsa tartara y papas"
-    },
+    "descripcion":"Pan suave, pollo a la plancha, queso de mano y amarillo, panceta, lomo y salsa tartara y papas",
+    "category": "Platos"
+},
     {
     "price": 530,
     "id": 2,
     "title": "Arepitas fritas",
-    "imagen": ArepitasFritas
+    "imagen": ArepitasFritas,
+    "imagenDetail": ArepaDetail,
+    "descripcion":"Pollo o lomito a la plancha, queso de mano, lechuga y salsa tartara.",
+    "category": "Platos"
     },
     {
     "price": 440,
     "id": 3,
     "title": "Tequeños",
-    "imagen": Tequenios
+    "imagen": Tequenios,
+    "imagenDetail": tequeniosDetail,
+    "descripcion":"Deliciosa masa rellena de queso venezolano.",
+    "category": "Platos"
     },
     {
     "price": 130,
     "id": 4,
     "title": "Pepsi Común",
-    "imagen": PepsiComun
+    "imagen": PepsiComun,
+    "imagenDetail": PepsiComun,
+    "descripcion":"Sabor original, bien fría!",
+    "category": "Bebidas"
     },
     {
     "price": 130,
     "id": 5,
     "title": "7up",
-    "imagen": SevenUp
+    "imagen": SevenUp,
+    "imagenDetail": SevenUp,
+    "descripcion":"Sabor original, bien fría!",
+    "category": "Bebidas"
     },
     {
     "price": 240,
     "id": 6,
     "title": "Patagonia",
-    "imagen": Patagonia
+    "imagen": Patagonia,
+    "imagenDetail": Patagonia,
+    "descripcion":"Cerveza suave, inigualable!.",
+    "category": "Bebidas"
     },
     {    
         "price": 590,
         "id": 10,
         "title": "Lemon Pie",
-        "imagen": LemonPie
+        "imagen": LemonPie,
+        "imagenDetail": LemonPie,
+        "descripcion":"El delicioso postre que conoces al estilo venezolano.",
+        "category": "Postres"
         }, 
         {
             "price": 550,
             "id": 11,
             "title": "Choco Torta",
-            "imagen": "https://cdn.shopify.com/s/files/1/0366/4442/1770/products/chocotortaentera_590x.jpg?v=1619473217"
+            "imagen": "https://cdn.shopify.com/s/files/1/0366/4442/1770/products/chocotortaentera_590x.jpg?v=1619473217",
+            "imagenDetail": "https://cdn.shopify.com/s/files/1/0366/4442/1770/products/chocotortaentera_590x.jpg?v=1619473217",
+            "descripcion":"Tradición Argentina.",
+            "category": "Postres"
         },{
             "price": 650,
             "id": 12,
             "title": "Cheese cake",
-            "imagen": CheeseCake
+            "imagen": CheeseCake,
+            "imagenDetail": CheeseCake,
+            "descripcion":"Si, verdadero Cheesecake!.",
+            "category": "Postres"
         }
 ]
 
