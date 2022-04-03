@@ -20,7 +20,8 @@ const Items=[
     "imagen": hamburguesaDePollo,
     "imagenDetail": HambPolloDetail,
     "descripcion":"Pan suave, pollo a la plancha, queso de mano y amarillo, panceta, lomo y salsa tartara y papas",
-    "category": "Platos"
+    "category": "Platos",
+    "Stock": 10
 },
     {
     "price": 530,
@@ -29,7 +30,8 @@ const Items=[
     "imagen": ArepitasFritas,
     "imagenDetail": ArepaDetail,
     "descripcion":"Pollo o lomito a la plancha, queso de mano, lechuga y salsa tartara.",
-    "category": "Platos"
+    "category": "Platos",
+    "Stock": 10
     },
     {
     "price": 440,
@@ -38,7 +40,8 @@ const Items=[
     "imagen": Tequenios,
     "imagenDetail": tequeniosDetail,
     "descripcion":"Deliciosa masa rellena de queso venezolano.",
-    "category": "Platos"
+    "category": "Platos",
+    "Stock": 10
     },
     {
     "price": 130,
@@ -47,7 +50,8 @@ const Items=[
     "imagen": PepsiComun,
     "imagenDetail": PepsiComun,
     "descripcion":"Sabor original, bien fría!",
-    "category": "Bebidas"
+    "category": "Bebidas",
+    "Stock": 10
     },
     {
     "price": 130,
@@ -56,7 +60,8 @@ const Items=[
     "imagen": SevenUp,
     "imagenDetail": SevenUp,
     "descripcion":"Sabor original, bien fría!",
-    "category": "Bebidas"
+    "category": "Bebidas",
+    "Stock": 10
     },
     {
     "price": 240,
@@ -65,7 +70,8 @@ const Items=[
     "imagen": Patagonia,
     "imagenDetail": Patagonia,
     "descripcion":"Cerveza suave, inigualable!.",
-    "category": "Bebidas"
+    "category": "Bebidas",
+    "Stock": 10
     },
     {    
         "price": 590,
@@ -74,7 +80,8 @@ const Items=[
         "imagen": LemonPie,
         "imagenDetail": LemonPie,
         "descripcion":"El delicioso postre que conoces al estilo venezolano.",
-        "category": "Postres"
+        "category": "Postres",
+        "Stock": 10
         }, 
         {
             "price": 550,
@@ -83,7 +90,8 @@ const Items=[
             "imagen": ChocoTorta,
             "imagenDetail": ChocoTorta,
             "descripcion":"Tradición Argentina.",
-            "category": "Postres"
+            "category": "Postres",
+            "Stock": 10
         },{
             "price": 650,
             "id": 12,
@@ -91,7 +99,8 @@ const Items=[
             "imagen": CheeseCake,
             "imagenDetail": CheeseCake,
             "descripcion":"Si, verdadero Cheesecake!.",
-            "category": "Postres"
+            "category": "Postres",
+            "Stock": 10
         }
 ]
 

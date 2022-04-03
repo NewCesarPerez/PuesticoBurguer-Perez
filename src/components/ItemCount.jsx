@@ -1,92 +1,35 @@
-import React, { useState } from 'react';
-import CartIcon from './CartIcon';
+import React from "react";
+import { useState } from "react";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
+const ItemCount = ({ maxQty, onAdd, qty, setQty }) => {
+const handleSum = () => qty < maxQty && setQty(qty + 1);
+const handleSubstract = () => qty > 1 && setQty(qty - 1);
 
-// let orderSum = 0;
-const StockProducto = 10;
-let currentStock = StockProducto;
-
-export default function ItemCount({initial, stock, onAddDos}) {
-const [count, setCount] = useState(initial);
-// const [OrderSum, setOrderSum]=useState(0);
-const [initialColor, setColor] = useState();
-
-
-
-  //Funciones de contador: Inicio
-let sumar = () => {
-    if (count === stock) {
-    console.log('Limite de stock');
-    return;
-    } else {
-    setCount(count + 1); 
-    setColor('fontColorSumar');
-    }
-};
-let restar = () => {
-    if (count === 0) return;
-    else {
-    setCount(count - 1);
-    setColor('fontColorRestar');
-    }
-};
-  //Funciones de contador: function
-
-  //Agregar Carrito: Inicio
-// let OnAdd = () => {
-//     if (
-//     (orderSum <= currentStock && orderSum > 0 &&count!==0) ||
-//     (count <= currentStock && count > 0)
-//     ) {
-//     setOrderSum(OrderSum+count)
-//     //orderSum = orderSum + count;
-//     console.log('Stock actualizado, Agregado al carrito');
-//     alert('Stock actualizado, Agregado al carrito');
-//     console.log('Count: ' + count);
-//     console.log('Order Sum: ' + OrderSum);
-//     currentStock = currentStock - count;
-    
-    
-//     } else if (count === 0) 
-//         {console.log('Contador en 0');
-//         alert('Contador en 0')}
-//     else {
-//         console.log('No es posible procesar la orden. Stock superado.');
-//         alert('No es posible procesar la orden. Stock superado.');
-        
-//     }
-// };
-
-  //Agregar Carrito: Fin
-
-return (
-    <div
-    className={initialColor}   style={{
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems:'center',
-    
-    }}
-    >
-    <button className={initialColor} onClick={() => sumar()}>
-        +
-    </button>
-    <button className={initialColor} onClick={() => restar()}>
-        -
-    </button>
-
-    <div className="Border">{count}</div>
-    <button onClick={()=>onAddDos(count, stock)}>Agregar al Carrito</button>
-    <button
-        onClick={() => {
-        console.log('Stock: ' + currentStock);
-        alert('Stock: ' + currentStock)
-        }}
-    >
-        Consultar Stock
-    </button>
-    <CartIcon/>
+  return (
+    <div className="d-flex flex-column">
+      <div>
+        <button
+          onClick={handleSubstract}
+          className="btn btn-outline-danger w-auto"
+        >
+          -
+        </button>
+        <span className="mx-2">{qty}</span>
+        <button onClick={handleSum} className="btn btn-outline-success w-auto">
+          +
+        </button>
+      </div>
+      <div className="mt-2 mb-1">
+        <button onClick={onAdd} className="btn btn-danger mx-1  m-auto">
+          Agregar
+        </button>
+        <Link className="btn btn-primary  m-auto" to={"/cart"}>
+          Carrito
+        </Link>
+      </div>
     </div>
-);
-}
+  );
+};
+
+export default ItemCount;
