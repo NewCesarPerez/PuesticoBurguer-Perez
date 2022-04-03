@@ -1,4 +1,5 @@
 **#Venezuelan fast food E-commerce. Project develop for CoderHouse based mainly on react.js**
+**Use of components, routing, dinamic links, dinamic mapping**
 
 # Getting Started with Create React App
 
