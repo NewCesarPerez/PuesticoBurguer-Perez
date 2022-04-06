@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { LINKS, DDLINKS } from "../JavaScript/Links";
 
 import "../App.css";
+import CartWidget from "./CartWidget";
 const NavBar = () => {
   return (
     <div className="w-100">
@@ -27,6 +28,7 @@ const NavBar = () => {
                   </Nav.Link>
                 ))}
               </NavDropdown>
+              <CartWidget/>
             </Nav>
           </Navbar.Collapse>
         </Container>

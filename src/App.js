@@ -20,34 +20,42 @@ import React from "react";
 import Login from "./components/Login";
 import Conocenos from "./components/Conocenos";
 import Agradecimientos from "./components/Agradecimientos";
+import { CartContext } from "./context/CartContext";
+import { useState } from "react";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <div className="App">
-        <NavBar />
-        <main className="w-100 ">
-          <Carrusel />
 
-          <Routes>
-            <Route path="/" element={<ItemListContainer />} />
-            <Route
-              path="/category/:categoryId"
-              element={<ItemListContainer />}
-            />
-            <Route
-              path="/details/:itemId"
-              element={<ItemDescriptionContainer />}
-            />
-            <Route path="/Cart" element={<Cart />} />
-            <Route path="/Login" element={<Login />} />
-            <Route path="/Conocenos" element={<Conocenos />} />
-            <Route path="/Agradecimientos" element={<Agradecimientos />} />
-            <Route path="*" element={<Navigate to="/" />} />
-          </Routes>
-        </main>
-      </div>
-    </BrowserRouter>
+
+
+  return (
+    <CartProvider>
+      <BrowserRouter>
+        <div className="App">
+          <NavBar />
+          <main className="w-100 ">
+            <Carrusel />
+            <Routes>
+              <Route path="/" element={<ItemListContainer />} />
+              <Route
+                path="/category/:categoryId"
+                element={<ItemListContainer />}
+              />
+              <Route
+                path="/details/:itemId"
+                element={<ItemDescriptionContainer />}
+              />
+              <Route path="/Cart" element={<Cart />} />
+              <Route path="/Login" element={<Login />} />
+              <Route path="/Conocenos" element={<Conocenos />} />
+              <Route path="/Agradecimientos" element={<Agradecimientos />} />
+              <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+          </main>
+        </div>
+      </BrowserRouter>
+    </CartProvider>
+    
   );
 }
 

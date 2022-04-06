@@ -24,10 +24,7 @@ const handleSubstract = () => qty > 1 && setQty(qty - 1);
         <button onClick={onAdd} className="btn btn-danger mx-1  m-auto">
           Agregar
         </button>
-        <Link className="btn btn-primary  m-auto" to={"/cart"}>
-          Carrito
-        </Link>
-      </div>
+      </div> 
     </div>
   );
 };

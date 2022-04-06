@@ -7,8 +7,6 @@ const ItemDescriptionContainer = () => {
   const [productDetail, setProductDetail] = useState({});
   const [loading, setLoading] = useState(false);
   const { itemId } = useParams();
-  console.log("Item ID " + itemId);
-
   useEffect(() => {
     setLoading(true);
     getProducts
@@ -18,7 +16,7 @@ const ItemDescriptionContainer = () => {
       .catch((error) => console.log(error))
       .finally(() => setLoading(false));
   }, [itemId]);
-  console.log(productDetail);
+  
   return (
     <div id="ItemDescriptionContainer" className="row">
       {loading ? (
