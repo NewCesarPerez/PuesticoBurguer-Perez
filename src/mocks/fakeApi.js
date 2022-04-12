@@ -21,7 +21,8 @@ const Items=[
     "imagenDetail": HambPolloDetail,
     "descripcion":"Pan suave, pollo a la plancha, queso de mano y amarillo, panceta, lomo y salsa tartara y papas",
     "category": "Platos",
-    "Stock": 10
+    "Stock": 10,
+    
 },
     {
     "price": 530,
@@ -31,7 +32,8 @@ const Items=[
     "imagenDetail": ArepaDetail,
     "descripcion":"Pollo o lomito a la plancha, queso de mano, lechuga y salsa tartara.",
     "category": "Platos",
-    "Stock": 10
+    "Stock": 0,
+    
     },
     {
     "price": 440,
@@ -41,7 +43,8 @@ const Items=[
     "imagenDetail": tequeniosDetail,
     "descripcion":"Deliciosa masa rellena de queso venezolano.",
     "category": "Platos",
-    "Stock": 10
+    "Stock": 10,
+    
     },
     {
     "price": 130,
@@ -51,7 +54,8 @@ const Items=[
     "imagenDetail": PepsiComun,
     "descripcion":"Sabor original, bien fría!",
     "category": "Bebidas",
-    "Stock": 10
+    "Stock": 10,
+    
     },
     {
     "price": 130,
@@ -61,7 +65,8 @@ const Items=[
     "imagenDetail": SevenUp,
     "descripcion":"Sabor original, bien fría!",
     "category": "Bebidas",
-    "Stock": 10
+    "Stock": 10,
+    
     },
     {
     "price": 240,
@@ -71,7 +76,8 @@ const Items=[
     "imagenDetail": Patagonia,
     "descripcion":"Cerveza suave, inigualable!.",
     "category": "Bebidas",
-    "Stock": 10
+    "Stock": 10,
+    
     },
     {    
         "price": 590,
@@ -81,7 +87,8 @@ const Items=[
         "imagenDetail": LemonPie,
         "descripcion":"El delicioso postre que conoces al estilo venezolano.",
         "category": "Postres",
-        "Stock": 10
+        "Stock": 10,
+        
         }, 
         {
             "price": 550,
@@ -91,7 +98,8 @@ const Items=[
             "imagenDetail": ChocoTorta,
             "descripcion":"Tradición Argentina.",
             "category": "Postres",
-            "Stock": 10
+            "Stock": 10,
+            
         },{
             "price": 650,
             "id": 12,
@@ -100,7 +108,8 @@ const Items=[
             "imagenDetail": CheeseCake,
             "descripcion":"Si, verdadero Cheesecake!.",
             "category": "Postres",
-            "Stock": 10
+            "Stock": 10,
+            
         }
 ]
 

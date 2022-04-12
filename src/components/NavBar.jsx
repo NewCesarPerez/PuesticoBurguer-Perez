@@ -1,11 +1,14 @@
-import React from "react";
+
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { LINKS, DDLINKS } from "../JavaScript/Links";
-
+import {React, useContext } from "react";
+import { CartContext } from '../context/CartContext'
 import "../App.css";
 import CartWidget from "./CartWidget";
 const NavBar = () => {
+
+  const {cart}=useContext(CartContext);
   return (
     <div className="w-100">
       <Navbar bg="warning" expand="lg">
@@ -28,7 +31,10 @@ const NavBar = () => {
                   </Nav.Link>
                 ))}
               </NavDropdown>
-              <CartWidget/>
+              {cart.length
+              ?<CartWidget/>
+              :""}
+              
             </Nav>
           </Navbar.Collapse>
         </Container>
