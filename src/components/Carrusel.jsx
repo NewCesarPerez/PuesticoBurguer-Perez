@@ -1,7 +1,7 @@
 import React from 'react'
-import imgCarouselOne from '../imagenes/imgCarousel_One(01).jpg'
-import imgCarouselTwo from '../imagenes/imgCarousel_Three(01).jpg'
-import imgCarouselThree from '../imagenes/imgCarousel_Two(01).jpg'
+import imgCarouselOne from '../imgCarousel/imgCarousel_One(01).jpg'
+import imgCarouselTwo from '../imgCarousel/imgCarousel_Three(01).jpg'
+import imgCarouselThree from '../imgCarousel/imgCarousel_Two(01).jpg'
 import { Carousel } from 'react-bootstrap'
 
 const Carrusel = () => {
@@ -26,7 +26,6 @@ const Carrusel = () => {
     />
 
     <Carousel.Caption>
-     
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>

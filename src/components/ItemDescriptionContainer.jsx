@@ -22,7 +22,7 @@ const ItemDescriptionContainer = () => {
   return (
     <div id="ItemDescriptionContainer" className="row">
       {loading ? (
-        <div className="spinner-border text-warning m-3" role="status"></div>
+        <div className="spinner-border text-warning m-3 m-auto" role="status"></div>
       ) : (
         <ItemDescription productDetail={productDetail} />
       )}

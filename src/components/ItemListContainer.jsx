@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+//import { getProducts } from "../mocks/fakeApi";
 import ItemsList from "./ItemsList";
 import ItemDescriptionContainer from "./ItemDescriptionContainer";
 import {collection, getDocs, getFirestore, query, where, orderBy} from "firebase/firestore";
@@ -27,6 +28,15 @@ getDocs(q)
 })
 .catch((error) => console.log(error))
 .finally(()=>setLoading(false))
+    
+    // getProducts
+    //   .then((response) => {
+    //     if (categoryId)
+    //       setProducts(response.filter((prod) => prod.category === categoryId));
+    //     else setProducts(response);
+    //   })
+    //   .catch((error) => console.log(error))
+    //   .finally(() => setLoading(false));
   }, [categoryId]);
 
   return (
