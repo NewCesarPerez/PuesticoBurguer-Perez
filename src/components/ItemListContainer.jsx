@@ -1,9 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getProducts } from "../mocks/fakeApi";
 import ItemsList from "./ItemsList";
 import ItemDescriptionContainer from "./ItemDescriptionContainer";
+import {collection, getDocs, getFirestore, query, where, orderBy} from "firebase/firestore";
+import {db} from "../firebase/config";
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
@@ -12,14 +13,20 @@ const ItemListContainer = () => {
   console.log(categoryId);
   useEffect(() => {
     setLoading(true);
-    getProducts
-      .then((response) => {
-        if (categoryId)
-          setProducts(response.filter((prod) => prod.category === categoryId));
-        else setProducts(response);
-      })
-      .catch((error) => console.log(error))
-      .finally(() => setLoading(false));
+//1.- Armar referencia sincronica
+const productosRef=collection(db, "productos")
+const q=categoryId ? query(productosRef, where('category','==',categoryId)):query(productosRef, orderBy('category'))
+
+//2.- LLamar asincronicamente a esa referencia
+
+getDocs(q)
+.then (resp=>{
+  const items=resp.docs.map((doc)=>({id:doc.id, ...doc.data()}))
+  setProducts(items);
+  console.log(items)
+})
+.catch((error) => console.log(error))
+.finally(()=>setLoading(false))
   }, [categoryId]);
 
   return (

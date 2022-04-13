@@ -19,7 +19,7 @@ const ItemDescription = ({ productDetail }) => {
       imagen: productDetail.imagen,
       qty: qty,
     };
-    productDetail.Stock = productDetail.Stock - qty;
+    //productDetail.Stock = productDetail.Stock - qty;
     
     console.log(itemToAdd);
     addItem(itemToAdd);
