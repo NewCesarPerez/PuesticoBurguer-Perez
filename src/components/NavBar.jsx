@@ -19,14 +19,14 @@ const NavBar = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              {LINKS.map((link) => (
-                <Nav.Link as={Link} to={link.url}>
+              {LINKS.map((link, index) => (
+                <Nav.Link as={Link} to={link.url} key={index}>
                   {link.name}
                 </Nav.Link>
               ))}
               <NavDropdown title="Mas" id="basic-nav-dropdown">
-                {DDLINKS.map((link) => (
-                  <Nav.Link as={Link} to={link.url}>
+                {DDLINKS.map((link, index) => (
+                  <Nav.Link as={Link} to={link.url} key={index}>
                     {link.name}
                   </Nav.Link>
                 ))}

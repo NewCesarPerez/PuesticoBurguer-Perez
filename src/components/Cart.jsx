@@ -27,6 +27,7 @@ const Cart = () => {
           <h3>{prod.title}</h3>
           <p> Cantidad: {prod.qty}</p>
           <h5>Precio: ${prod.price *prod.qty}</h5>
+          
           <button onClick={()=>removeItem(prod.id)} className='btn btn-warning'><BsFillTrashFill/></button>
           <hr/>
         </div>))
@@ -34,7 +35,9 @@ const Cart = () => {
 
       <h4 className='text-danger'>TOTAL: ${cartTotal()}</h4>
       <hr/>
-      <button className='btn btn-warning text-danger' onClick={emptyCart}>Vaciar carrito</button>
+      <Link to={"/checkout"} className='btn btn-danger mx-2' >Pagar</Link>
+      <br />
+      <button className='btn btn-warning my-2' onClick={emptyCart}>Vaciar carrito</button>
     </div>
     )
 }

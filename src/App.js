@@ -3,15 +3,13 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import NavBar from "./components/NavBar";
-import ItemsList from "./components/ItemsList";
-import ItemCount from "./components/ItemCount";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDescriptionContainer from "./components/ItemDescriptionContainer";
 import Carrusel from "./components/Carrusel";
 import Cart from "./components/Cart";
+import Footer from "./components/Footer";
 import {
   BrowserRouter,
-  Router,
   Routes,
   Route,
   Navigate,
@@ -20,9 +18,8 @@ import React from "react";
 import Login from "./components/Login";
 import Conocenos from "./components/Conocenos";
 import Agradecimientos from "./components/Agradecimientos";
-import { CartContext } from "./context/CartContext";
-import { useState } from "react";
 import { CartProvider } from "./context/CartContext";
+import CheckOut from "./components/CheckOut";
 
 function App() {
 
@@ -37,21 +34,17 @@ function App() {
             <Carrusel />
             <Routes>
               <Route path="/" element={<ItemListContainer />} />
-              <Route
-                path="/category/:categoryId"
-                element={<ItemListContainer />}
-              />
-              <Route
-                path="/details/:itemId"
-                element={<ItemDescriptionContainer />}
-              />
-              <Route path="/Cart" element={<Cart />} />
+              <Route path="/category/:categoryId" element={<ItemListContainer />}/>
+              <Route path="/details/:itemId" element={<ItemDescriptionContainer />}/>
               <Route path="/Login" element={<Login />} />
               <Route path="/Conocenos" element={<Conocenos />} />
+              <Route path="/Cart" element={<Cart />} />
+              <Route path="/checkout" element={<CheckOut />} />
               <Route path="/Agradecimientos" element={<Agradecimientos />} />
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
           </main>
+          <Footer/>
         </div>
       </BrowserRouter>
     </CartProvider>
