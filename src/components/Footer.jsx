@@ -20,8 +20,8 @@ const Footer = () => {
                     <div className='my-2' >
                             <h4 ><span className='text-warning'> Nuestras</span> <span className='text-danger'>Redes</span> </h4>
                             <div >
-                                <a  href="https://www.instagram.com/"><i class="iconos bi-instagram mx-5 text-danger"></i></a>
-                                <a  href="https://www.whatsapp.com/"><i class="iconos bi-whatsapp mx-5 text-warning"></i></a>
+                                <a  href="https://www.instagram.com/"><i className="iconos bi-instagram mx-5 text-danger"></i></a>
+                                <a  href="https://www.whatsapp.com/"><i className="iconos bi-whatsapp mx-5 text-warning"></i></a>
                             </div>
                     </div>
                 <div className="mb-2">

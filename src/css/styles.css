@@ -1,0 +1,113 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap');
+
+.fontFamilyForm{
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.widthInputContainer{
+    width: 20%;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:7px;
+    
+    
+}
+@media(max-width:800px) {
+
+    .form{
+        grid-template-columns: 1fr;  
+    }
+}
+
+.grupoInput{
+    position: relative;
+    z-index:90;
+}
+.input{
+    width:100%;
+    border-radius: 3px;
+    height: 45px;
+    line-height: 45px;
+    padding:0 40px 0 10px;
+    transition: .3s ease all;
+    
+}
+.inputError{
+    width:100%;
+    border-radius: 3px;
+    height: 45px;
+    line-height: 45px;
+    padding:0 40px 0 10px;
+    transition: .3s ease all;
+    
+}
+
+.input:focus{
+    border:3px solid #c8ff00;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163,0.4)
+}
+.inputError:focus{
+    
+    border:3px solid yellow;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163,0.4)
+}
+
+.leyendaError{
+    font-size: 12px;
+    margin-bottom:0;
+    color: #BB2929;
+    
+
+}
+.iconoValidacion{
+    position:absolute;
+    right: 10px;
+    bottom:14px;
+    z-index:100;
+    font-size:16px;
+
+}
+
+.hideIcon{
+    opacity: 0;
+}
+.showIcon{
+    opacity: 1;
+}
+
+.msjError{
+    height:45px;
+    line-height: 45px;
+    background-color: red;
+    padding: 0px 15px;
+    border-radius: 3px;
+    grid-column: span 2;
+    
+
+}
+.msjError p{
+    margin:0;
+}
+.bgNavBar{
+    background-color: #A4AC0C;
+}
+.textColorNavBar{
+    color:#BB2929 !important;
+}
+.checkOutImg{
+    width:140px;
+    height: 120px;
+    border-radius: 50%;
+
+}
+
+.gradiente{
+background: rgb(200,56,45);
+background: radial-gradient(circle, rgba(200,56,45,1) 0%, rgba(231,181,4,1) 100%);;
+}

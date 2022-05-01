@@ -16,23 +16,17 @@ const ItemDescription = ({ productDetail }) => {
       id: productDetail.id,
       title: productDetail.title,
       price: productDetail.price,
-      imagen: productDetail.imagen,
+      imagen: productDetail.imagenDetail,
       qty: qty,
     };
-    //productDetail.Stock = productDetail.Stock - qty;
-    
-    console.log(itemToAdd);
+
     addItem(itemToAdd);
   };
- 
-  
-  const { cart, addItem, isInCart } = useContext(CartContext);
-  console.log(cart);
-  
-  
+
+  const { addItem, isInCart } = useContext(CartContext);
+
   return (
-    
-    <div className="col col-12 m-auto w-75">
+    <div className="col col-12 m-auto w-75 fontFamilyForm">
       <div className="card my-4">
         <img
           className="imgCarrito w-50 h-50"
@@ -49,7 +43,7 @@ const ItemDescription = ({ productDetail }) => {
               Stock: {productDetail.Stock}
             </p>
 
-            {productDetail.stock === 0 && (
+            {productDetail.Stock === 0 && (
               <p className="card-text my-1 text-danger font-weight-bold">
                 Item sin stock
               </p>
@@ -74,13 +68,12 @@ const ItemDescription = ({ productDetail }) => {
           )}
 
           <button
-            className="btn btn-outline-success w-25 m-auto my-1"
+            className="btn btn-outline-success m-auto my-1"
             onClick={() => {
               handleNavigate();
             }}
           >
-            {" "}
-            Volver{" "}
+            Volver
           </button>
         </div>
       </div>

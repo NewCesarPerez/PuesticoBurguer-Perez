@@ -15,9 +15,6 @@ import {
   Navigate,
 } from "react-router-dom";
 import React from "react";
-import Login from "./components/Login";
-import Conocenos from "./components/Conocenos";
-import Agradecimientos from "./components/Agradecimientos";
 import { CartProvider } from "./context/CartContext";
 import CheckOut from "./components/CheckOut";
 
@@ -36,11 +33,8 @@ function App() {
               <Route path="/" element={<ItemListContainer />} />
               <Route path="/category/:categoryId" element={<ItemListContainer />}/>
               <Route path="/details/:itemId" element={<ItemDescriptionContainer />}/>
-              <Route path="/Login" element={<Login />} />
-              <Route path="/Conocenos" element={<Conocenos />} />
               <Route path="/Cart" element={<Cart />} />
               <Route path="/checkout" element={<CheckOut />} />
-              <Route path="/Agradecimientos" element={<Agradecimientos />} />
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
           </main>

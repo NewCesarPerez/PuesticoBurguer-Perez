@@ -1,40 +1,38 @@
-
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { LINKS, DDLINKS } from "../JavaScript/Links";
-import {React, useContext } from "react";
-import { CartContext } from '../context/CartContext'
+import { LINKS } from "../JavaScript/Links";
+import { React, useContext } from "react";
+import { CartContext } from "../context/CartContext";
 import "../App.css";
 import CartWidget from "./CartWidget";
+import imgLogo from "../imgLogo/logoPuesticoBurger.jpg";
 const NavBar = () => {
-
-  const {cart}=useContext(CartContext);
+  const { cart } = useContext(CartContext);
   return (
-    <div className="w-100">
-      <Navbar bg="warning" expand="lg">
+    <div className="w-100 fontFamilyForm">
+      <Navbar expand="lg">
         <Container>
           <Navbar.Brand as={Link} to="/" href="#home">
-            Puestico Burger
+            <img
+              className="App-logo mx-5"
+              src={imgLogo}
+              alt="Logo de la marca"
+            />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+          <Navbar.Collapse className="textColorNavBar" id="basic-navbar-nav">
+            <Nav>
               {LINKS.map((link, index) => (
-                <Nav.Link as={Link} to={link.url} key={index}>
+                <Nav.Link
+                  className="textColorNavBar mx-5"
+                  as={Link}
+                  to={link.url}
+                  key={index}
+                >
                   {link.name}
                 </Nav.Link>
               ))}
-              <NavDropdown title="Mas" id="basic-nav-dropdown">
-                {DDLINKS.map((link, index) => (
-                  <Nav.Link as={Link} to={link.url} key={index}>
-                    {link.name}
-                  </Nav.Link>
-                ))}
-              </NavDropdown>
-              {cart.length
-              ?<CartWidget/>
-              :""}
-              
+              {cart.length ? <CartWidget /> : ""}
             </Nav>
           </Navbar.Collapse>
         </Container>

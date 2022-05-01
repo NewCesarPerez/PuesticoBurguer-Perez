@@ -2,18 +2,21 @@
   text-align: center;
   display: flex;
   flex-direction: column;
- justify-content: flex-start;
- align-items: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
   
 }
 
 .App-logo {
-  height: 40vmin;
+  width: 6rem;
+  height: 6rem;
   pointer-events: none;
   z-index: 0;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  border-radius: 50%;
+  box-shadow:5px 5px 8px #B33038
 }
 
 .list{

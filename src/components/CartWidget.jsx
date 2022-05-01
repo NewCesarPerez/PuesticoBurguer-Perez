@@ -9,9 +9,9 @@ const CartWidget = () => {
     const {cartQty}=useContext(CartContext)
   return (
     <div className="my-1">
-      <Link to={"/cart"} className="text-dark mx-4">
-        <BsFillBagCheckFill />
-        <span className="mx-1">{cartQty()}</span>
+      <Link to={"/cart"} className="mx-2 text-decoration-none">
+        <BsFillBagCheckFill className="text-danger" />
+        <span className="mx-1 text-danger">{cartQty()}</span>
       </Link>
     </div>
   );

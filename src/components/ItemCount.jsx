@@ -1,11 +1,6 @@
-import {React, useContext } from "react";
-import { CartContext } from '../context/CartContext'
-import { useState } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
-
 const ItemCount = ({ maxQty, onAdd, qty, setQty }) => {
-const handleSum = () => qty < maxQty && setQty(qty + 1);
-const handleSubstract = () => qty > 1 && setQty(qty - 1);
+  const handleSum = () => qty < maxQty && setQty(qty + 1);
+  const handleSubstract = () => qty > 1 && setQty(qty - 1);
 
   return (
     <div className="d-flex flex-column">
@@ -25,7 +20,7 @@ const handleSubstract = () => qty > 1 && setQty(qty - 1);
         <button onClick={onAdd} className="btn btn-danger mx-1  m-auto">
           Agregar
         </button>
-      </div> 
+      </div>
     </div>
   );
 };

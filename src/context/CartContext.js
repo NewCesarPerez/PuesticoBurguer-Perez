@@ -1,39 +1,89 @@
 import { createContext } from "react";
 import { useState } from "react";
 
-export const CartContext= createContext();
+export const CartContext = createContext();
 
-export const CartProvider=({children})=>{
+export const CartProvider = ({ children }) => {
+  const [cart, setCart] = useState(getProductsLocalStorage);
 
-const [cart, setCart]=useState([])
+  const addItem = (item) => {
+    saveProductLocalStorage(item);
+    setCart([...cart, item]);
+  };
 
-const addItem = (item) => {
-  
-  setCart([...cart, item])
+  const isInCart = (id) => {
+    return cart.some((produ) => produ.id === id);
+  };
+
+  const cartQty = () => {
+    return cart.reduce((acc, prod) => (acc += prod.qty), 0);
+  };
+
+  const cartTotal = () => {
+    return cart.reduce((acc, prod) => (acc += prod.price * prod.qty), 0);
+  };
+
+  const emptyCart = () => {
+    setCart([]);
+    removeAllProductsLocalStorage();
+  };
+
+  const removeItem = (id) => {
+    setCart(cart.filter((prod) => prod.id !== id));
+    eraseProductLocalStorage(cart.filter((prod) => prod.id === id)[0].id);
+  };
+  return (
+    <CartContext.Provider
+      value={{
+        setCart,
+        cart,
+        addItem,
+        isInCart,
+        cartQty,
+        cartTotal,
+        emptyCart,
+        removeItem,
+        saveProductLocalStorage,
+        getProductsLocalStorage,
+        eraseProductLocalStorage,
+        removeAllProductsLocalStorage,
+      }}
+    >
+      {children}
+    </CartContext.Provider>
+  );
 };
 
-const isInCart=(id)=>{
-  return cart.some(produ=>produ.id===id)
-}
+const saveProductLocalStorage = (product) => {
+  let products;
+  products = getProductsLocalStorage();
+  products.push(product);
+  localStorage.setItem("products", JSON.stringify(products));
+};
+const eraseProductLocalStorage = (prodId) => {
+  let productLS;
+  productLS = getProductsLocalStorage();
 
-const cartQty=()=>{
-  return cart.reduce((acc, prod)=>acc+=prod.qty,0)
-}
+  productLS.forEach((prodLS, index) => {
+    if (prodLS.id === prodId) {
+      productLS.splice(index, 1);
+    }
+  });
+  localStorage.setItem("products", JSON.stringify(productLS));
+};
 
-const cartTotal=()=>{
-  return cart.reduce((acc, prod)=>acc +=prod.price*prod.qty,0)
-}
+const removeAllProductsLocalStorage = () => {
+  let productLS = [];
+  localStorage.setItem("products", JSON.stringify(productLS));
+};
 
-const emptyCart=()=>{
-  setCart([])
-}
+const getProductsLocalStorage = () => {
+  let productLS;
+  if (localStorage.getItem("products") === null) {
+    productLS = [];
+  } else {
+    productLS = JSON.parse(localStorage.getItem("products"));
+  }
 
-const removeItem=(id)=>{
-setCart(cart.filter((prod)=>prod.id!==id))
-}
-    return(
-        <CartContext.Provider value={{cart, addItem, isInCart, cartQty, cartTotal, emptyCart, removeItem}}>
-            {children}
-        </CartContext.Provider>
-    )
-}
+  return productLS;
+};
