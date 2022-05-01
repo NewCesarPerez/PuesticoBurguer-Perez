@@ -111,3 +111,11 @@
 background: rgb(200,56,45);
 background: radial-gradient(circle, rgba(200,56,45,1) 0%, rgba(231,181,4,1) 100%);;
 }
+.nav-link:hover{
+    transition: ease;
+    font-size: 1.5rem;
+
+}
+.textColorNavBar:hover{
+    color: rgba(231,181,4,1) !important;
+}
