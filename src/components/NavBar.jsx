@@ -24,7 +24,7 @@ const NavBar = () => {
             <Nav>
               {LINKS.map((link, index) => (
                 <Nav.Link
-                  className="textColorNavBar mx-5"
+                  className="textColorNavBar mx-5 "
                   as={Link}
                   to={link.url}
                   key={index}
