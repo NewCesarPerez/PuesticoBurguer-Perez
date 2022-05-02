@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 //import { getProducts } from "../mocks/fakeApi";
 import ItemsList from "./ItemsList";
 import { collection, getDocs, query, where, orderBy } from "firebase/firestore";
-import { db } from "../firebase/config";
+import { db } from "../Firebase/config";
 
 
 const ItemListContainer = () => {

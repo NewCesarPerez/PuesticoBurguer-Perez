@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
-import { db } from "../firebase/config";
+import { db } from "../Firebase/config";
 import {
   query,
   where,
